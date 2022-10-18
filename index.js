@@ -81,7 +81,7 @@ function displayid() {
     </div>`
     
   }
-  countcart.innerHTML = buybrazilian.length;
+  countcart.innerHTML = buybrazilian.length
 }
 
 //  FUNCTION INTO HTML TO CART
@@ -92,8 +92,8 @@ function cardbutton(i) {
    totalprice();
    displayid();
    price();
-  //  saveToLocalStorage();
-  //  getToLocalStorage();
+   saveToLocalStorage();
+   getToLocalStorage();
 }
 
 // FUNCTION FOR DISPLAY PICTURE
@@ -115,8 +115,8 @@ function price() {
     </div>`
     
   }
-  // saveToLocalStorage();
-  // getToLocalStorage();
+  saveToLocalStorage();
+  getToLocalStorage();
 }
 
 // REMOVE LOOPING DISPLAY
@@ -147,14 +147,14 @@ function totalprice() {
   
 }
 
-// function saveToLocalStorage() {
-//   let data = JSON.stringify(buybrazilian)
-//   localStorage.setItem('buybrazilian', data)
-// }
+function saveToLocalStorage() {
+  let data = JSON.stringify(buybrazilian)
+  localStorage.setItem('buybrazilian', data)
+}
 
-// function getToLocalStorage() {
-//  let data = JSON.parse(localStorage.getItem('buybrazilian'))
-//  buybrazilian = data
-// }
+function getToLocalStorage() {
+ let data = JSON.parse(localStorage.getItem('buybrazilian'))
+ buybrazilian = data
+}
 
 displayid()
