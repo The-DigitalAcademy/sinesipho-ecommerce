@@ -86,8 +86,9 @@ function displayid() {
 
 //  FUNCTION INTO HTML TO CART
 function cardbutton(i) {
+  buybrazilian.push(shopping[i])
    document.getElementById('countcart').innerHTML = buybrazilian.length;
-   buybrazilian.push(shopping[i])
+   
 
    totalprice();
    displayid();
