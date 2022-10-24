@@ -64,7 +64,7 @@ const alltotal = document.getElementById('alltotal')
 
 // FUNCTION INTO HTML DISPLAY
 function displayid() {
-  getToLocalStorage();
+  
   hair.innerHTML = ""
   for (let i = 0; i < shopping.length; i++) {
     hair.innerHTML += `<div class="row" id="hair">
@@ -88,18 +88,18 @@ function displayid() {
 //  FUNCTION INTO HTML TO CART
 function cardbutton(i) {
   buybrazilian.push(shopping[i])
-   document.getElementById('countcart').innerHTML = buybrazilian.length;
    
-
-   totalprice();
-   price();
-   saveToLocalStorage();
-   getToLocalStorage();
-   displayid();
+   
+   totalprice()
+   saveToLocalStorage()
+   getToLocalStorage()
+   price()
+   displayid()
 }
 
 // FUNCTION FOR DISPLAY PICTURE
 function price() {
+  
   displaypicture.innerHTML = ""
   for (let i = 0; i < buybrazilian.length; i++) {
     displaypicture.innerHTML += `<div class="row" id="hair">
@@ -117,8 +117,7 @@ function price() {
     </div>`
     
   }
-  saveToLocalStorage();
-  getToLocalStorage();
+  
 }
 
 // REMOVE LOOPING DISPLAY
@@ -126,11 +125,11 @@ function remove(i) {
   buybrazilian.splice(i, 1)
     document.getElementById('countcart').innerHTML = buybrazilian.length;
 
-    displayid();
-    totalprice();
-    price();
-    saveToLocalStorage();
-    getToLocalStorage();
+   totalprice()
+   saveToLocalStorage()
+   getToLocalStorage()
+   price()
+   displayid()
 }
 
 
@@ -143,8 +142,7 @@ function totalprice() {
     total += buybrazilian[i].price 
   }
   alltotal.innerHTML = `R${total}`
-  saveToLocalStorage();
-  getToLocalStorage();
+  getToLocalStorage()
   
 }
 
@@ -157,5 +155,6 @@ function getToLocalStorage() {
  let data = JSON.parse(localStorage.getItem('buybrazilian'))
  buybrazilian = data
 }
-
+getToLocalStorage()
 displayid()
+price()
