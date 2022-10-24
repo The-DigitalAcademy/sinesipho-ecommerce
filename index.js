@@ -64,6 +64,7 @@ const alltotal = document.getElementById('alltotal')
 
 // FUNCTION INTO HTML DISPLAY
 function displayid() {
+  getToLocalStorage();
   hair.innerHTML = ""
   for (let i = 0; i < shopping.length; i++) {
     hair.innerHTML += `<div class="row" id="hair">
@@ -125,12 +126,11 @@ function remove(i) {
   buybrazilian.splice(i, 1)
     document.getElementById('countcart').innerHTML = buybrazilian.length;
 
+    displayid();
     totalprice();
-    
     price();
     saveToLocalStorage();
     getToLocalStorage();
-    displayid();
 }
 
 
