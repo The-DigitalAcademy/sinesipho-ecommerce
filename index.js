@@ -142,6 +142,7 @@ function totalprice() {
     total += buybrazilian[i].price 
   }
   alltotal.innerHTML = `R${total}`
+  saveToLocalStorage()
   getToLocalStorage()
   
 }
