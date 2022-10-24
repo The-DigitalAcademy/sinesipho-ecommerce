@@ -91,10 +91,10 @@ function cardbutton(i) {
    
 
    totalprice();
-   displayid();
    price();
    saveToLocalStorage();
    getToLocalStorage();
+   displayid();
 }
 
 // FUNCTION FOR DISPLAY PICTURE
