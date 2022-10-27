@@ -147,6 +147,8 @@ function totalprice() {
   
 }
 
+// SAVE LOCALSTORAGE
+
 function saveToLocalStorage() {
   let data = JSON.stringify(buybrazilian)
   localStorage.setItem('buybrazilian', data)
